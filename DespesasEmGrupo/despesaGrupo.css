@@ -30,6 +30,15 @@ body {
   .menu h1 {
     font-size: 1.75rem;
   }
+
+  .voltarMenu {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+  }
     
   main {
     width: 100%;

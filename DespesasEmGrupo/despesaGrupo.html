@@ -9,14 +9,74 @@
     <link rel="stylesheet" href="../FormModal/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" 
+    rel="stylesheet">
+
     <title>Despesas em grupo</title>
 </head>
 <body>
     <header class="menu">
-        <a href="../index.html">Meu saldo</a>
+        <a class="voltarMenu" href="../index.html">Meu saldo</a>
         <h1>Despesa em grupo</h1>
-        <button id="abrirModal">Adicionar despesa em grupo</button>
+        <button id="open-modal-button">Adicionar despesa em grupo</button>
+
+        <!-- The Modal -->
+      <div id="form-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Adicionar Despesa</h3>
+                <img
+                  src="/images/close.svg"
+                  alt="Fechar modal"
+                  onclick="closeModal()"
+                />
+              </div>
+
+          <div class="input-wrapper">
+            <label for="title"><b>Título</b></label>
+            <input
+              type="text"
+              placeholder="Escreva"
+              name="title"
+              id="title-input"
+              required
+            />
+          </div>
+          <div class="input-wrapper">
+            <label for="participants"><b>Participantes</b></label>
+            <input
+              type="number"
+              placeholder="5"
+              name="participants"
+              id="participants-input"
+              required
+            />
+          </div>
+          <div class="input-wrapper">
+            <label for="amount"><b>Valor Total</b></label>
+            <input
+              type="number"
+              placeholder="50"
+              name="amount"
+              id="amount-input"
+              required
+            />
+          </div>
+
+
+
+          <button
+            type="submit"
+            onclick="adicionarDespesaGrupo()"
+            id="adicionar-nova-despesa-grupo-botao"
+            class="add-new-financial-movement-button"
+          >
+            Adicionar
+          </button>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -28,6 +88,9 @@
             </div>
         </div>
     </main>
+
 <script src="despesaGrupo.js"></script>
+<script src="../FormModal/index.js"></script>
+
 </body>
 </html>

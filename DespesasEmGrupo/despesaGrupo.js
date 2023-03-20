@@ -10,20 +10,19 @@ class despesaGrupo {
         this.numeroPessoas = Number(numeroPessoas);
         this.valorPessoa = Number(valorTotal) / Number(numeroPessoas);
     }
-}
+};
 
 const tabela = document.getElementById("despesasGrupo");
 
-const DespesaGrupo = [
-    new despesaGrupo("Netflix", 60, 3),
-    new despesaGrupo("Amazon Prime", 20, 2),
-    new despesaGrupo("HBO", 30, 2),
-];
+const DespesaGrupo = [];
 
-adicionarDespesa();
+const titleElement = document.getElementById("title-input");
+const participantsElement = document.getElementById("participants-input");
+const amountElement = document.getElementById("amount-input");
 
-function adicionarDespesa() {
-    DespesaGrupo.forEach((despesa) => {
+function atualizarDespesas() {
+    const despesa = DespesaGrupo[DespesaGrupo.length - 1];
+        
         tabela.insertAdjacentHTML(
             "beforeend",
             `
@@ -34,5 +33,23 @@ function adicionarDespesa() {
             </div>
             `            
         );
-    });
-}
+};
+
+function adicionarDespesaGrupo() {
+    DespesaGrupo.push(
+        new despesaGrupo(
+            titleElement.value,
+            participantsElement.value,
+            amountElement.value,
+        )
+    );
+
+    atualizarDespesas();
+
+    titleElement.value = "";
+    participantsElement.value = "";
+    amountElement.value = "";
+
+    alert("Despesa adicionada com sucesso!")
+
+};

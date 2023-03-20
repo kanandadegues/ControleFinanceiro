@@ -32,6 +32,15 @@ body {
   font-size: 1.75rem;
 }
 
+.voltarMenu {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
 .indicators {
   display: flex;
   flex-direction: row;
