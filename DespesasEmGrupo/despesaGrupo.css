@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+    background-color: #282c35;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .menu {
+    background-color: #1a1c22;
+    padding: 1rem 2rem;
+    color: white;
+    width: -webkit-fill-available;
+  
+    font-weight: 500;
+  
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .menu h1 {
+    font-size: 1.75rem;
+  }
+    
+  main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .tabela {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .tabela .cabecalho:not(:first-child) {
+    background-color: #0005;
+    border-radius: 0.25rem;
+  }
+  
+  .cabecalho {
+    display: flex;
+    color: white;
+    width: 100%;
+  }
+  
+  .cabecalho div:first-child {
+    width: 60%;
+    padding: 0.5rem 1rem;
+    text-align: start;
+  }
+  
+  .cabecalho div:not(:first-child) {
+    width: 20%;
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
